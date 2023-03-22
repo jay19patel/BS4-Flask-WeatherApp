@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<section>
+    <div>
+        <h1 class="text-center"> {{location}} </h1>
+        <hr>
+        <h6 class="text-center"> {{info}}  </h6>
+        <div class="row">
+            <div class="col p-3 mb-2 bg-secondary  text-white">
+                <div class="text-center">
+                <h3 >Humdity</h3>
+                <h1>{{humidity}}</h1>
+                </div>
+            </div>
+
+            <div class="col p-3 mb-2 bg-info text-dark">
+                <div class="text-center">
+                <h1 >Temps</h1>
+                <h1>{{temp}}</h1>
+                </div>
+            </div>
+
+            <div class="col p-3 mb-2 bg-secondary  text-white">
+                <div class="text-center">
+                <h3 >Moonrise</h3>
+                <h1>{{Moonrise}}</h1>
+                </div>
+            </div>
+
+        </div>
+    </div>
+<hr>
+    <div>
+        <h2 class="text-center"> PAST DATA</h2>
+    </div>
+    <br><br>
+    <table class="table table-info">
+        <thead>
+          <tr>
+            <th scope="col">{{allDays[1][0]}}</th>
+            <th scope="col">{{allDays[2][0]}}</th>
+            <th scope="col">{{allDays[3][0]}}</th>
+            <th scope="col">{{allDays[4][0]}}</th>
+            <th scope="col">{{allDays[5][0]}}</th>
+            <th scope="col">{{allDays[6][0]}}</th>
+            <th scope="col">{{allDays[7][0]}}</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <th>{{allDays[1][1]}}</th>
+            <td>{{allDays[2][1]}}</td>
+            <td>{{allDays[3][1]}}</td>
+            <td>{{allDays[4][1]}}</td>
+            <td>{{allDays[5][1]}}</td>
+            <td>{{allDays[6][1]}}</td>
+            <td>{{allDays[7][1]}}</td>
+          </tr>
+        </tbody>
+      </table>
+</section>
+{% endblock %}
